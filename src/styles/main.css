@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:wght@300;900&display=swap');
+
+:root{
+  --green- : #E1FFB1;
+  --dark-green- : #C7F2A4;
+
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+*{
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: var(--green-);
+}
+
+.skip{
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: white;
+  text-decoration: none;
+  color: black;
+  z-index: 100;
+}
+
+.skip:focus {
+  top: 0;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5em 1em;
+  position: fixed;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: var(--dark-green-);
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+}
+
+header img{
+  width: 100%;
+}
+
+#logo{
+  text-decoration: none;
+  color: black;
+  font-family: 'Bungee Spice', cursive;
+  font-size: 1.7em;
+  height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+nav .navRight{
+  position: absolute;
+  top: 0;
+  background-color: var(--dark-green-);
+  width: 100vw;
+  height: 100vh;
+  right: -100vw;
+  transition: 1s;
+}
+
+nav .navRight.open{
+  right: 0;
+}
+
+#sideNav a{
+  text-decoration: none;
+  color: black;
+  display: block;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.3em;
+}
+
+#sideNav a:hover{
+  color: var(--yellow-);
+}
+
+#btn-openNav{
+  font-size: 3em;
+  text-decoration: none;
+  color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 44px;
+}
+
+#btn-openNav:hover,
+#btn-closeNav:hover{
+  color: var(--yellow-);
+}
+
+#btn-closeNav{
+  font-size: 3.5em;
+  background-color: transparent;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  cursor: pointer;
+  width: 44px;
+}
+
+#content-title{
+  padding-top: 4em;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+.card{
+  margin: 1em;
+  padding: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+  display: block;
+  background-color: var(--dark-green-);
+}
+
+.bi-star-fill{
+  color: orange;
+}
+
+.card ,.description h2{
+  font-size: 1.3em;
+}
+
+.card img{
+  width: 100%;
+  height: 15em;
+  object-fit: cover;
+}
+
+.card .description a{
+  padding: 1em;
+  background-color: orange;
+  color: black;
+  border-radius: 0.5em;
+  text-decoration: none;
+}
+
+.card .description p{
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: justify;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* number of lines to show */
+  line-clamp: 2; 
+  -webkit-box-orient: vertical;
+}
+
+#detailContainer{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1em;
+}
+
+.restaurant_name{
+  text-align: start;
+  padding: 0 0.5em;
+  font-size: 1.5em;
+}
+
+#detailRestaurant{
+  padding: 1em;
+}
+
+#detailRestaurant img{
+  max-width: 30em;
+  height: 20em;
+  object-fit: cover;
+}
+
+#detailRestaurant .restaurant_desc .desc{
+  text-align: justify ;
+}
+
+.restaurant_menus{
+  padding: 1em;
+}
+
+
+#detail_info{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+.customer_reviews{
+  padding: 1em;
+  max-width: 40em;
+}
+
+#address,
+#city,
+#menu_drink_title,
+#menu_food_title,
+#review_title
+{
+  font-weight: bold;
+}
+
+.review{
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+}
+
+#showMore{
+  margin: 1em 0;
+  border: none;
+  cursor: pointer;
+  padding: 1em;
+}
+
+#showMore.open{
+  display: none;
+}
+
+#reviewForm{
+  display: flex;
+  flex-direction: column;
+}
+
+#btn-like{
+  position: fixed;
+  bottom: 20px;
+  right : 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border : none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+#btn-like i{
+  font-size: 1.5em;
+}
+
+#btn-like .bi-heart-fill{
+  color: red;
+}
+
+
+footer{
+  text-align: center;
+  padding: 1em;
+}
+

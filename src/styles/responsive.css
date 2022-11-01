@@ -1,0 +1,74 @@
+@media screen and (min-width: 768px){
+    header img{
+      height: 30em;
+      object-fit: cover;
+      width: 100%;
+    }
+  
+    nav{
+      padding: 1em;
+    }
+    
+    #sideNav{
+      display: flex;
+      position: static;
+      right: 0;
+      height: 1em;
+      align-items: center;
+      width: 50%;
+      justify-content: space-evenly;
+    }
+  
+    #sideNav #btn-closeNav,
+    #btn-openNav{
+      display: none;
+    }
+  
+    #contentContainer{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    #detailRestaurant .restaurant_desc .desc{
+      text-align: justify ;
+    }
+
+    #detail_info{
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+    }
+
+
+}
+  
+@media screen and (min-width: 1024px){
+    #contentContainer{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    #detailContainer{
+      margin: 0 10em;
+    }
+
+    #detailRestaurant{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10em;
+    }
+
+    .restaurant_desc{
+      margin-top: -1.5em;
+    }
+
+    #detailRestaurant .restaurant_desc .desc{
+      text-align: justify ;
+    }
+
+    #btn-like{
+      bottom : 60px;
+      right : 70px;
+    }
+}
+  
+  
